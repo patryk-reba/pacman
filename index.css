@@ -1,7 +1,21 @@
-html, body {
+html,
+body {
     margin: 10;
     padding: 10;
+
+
 }
+
+
+
+body {
+
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+
 
 .grid {
     display: flex;
@@ -9,11 +23,12 @@ html, body {
     width: 420px;
     height: 420px;
     border: solid black;
+    margin: 0 auto
 }
 
 .grid div {
     width: 15px;
-    height: 15px;   
+    height: 15px;
 }
 
 .pac-dot {
@@ -23,7 +38,7 @@ html, body {
 }
 
 .wall {
-    background-color: blue;
+    background-color: black;
 }
 
 .power-pellet {
