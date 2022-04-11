@@ -48,11 +48,14 @@ body {
     border-radius: 7.5px;
 }
 
-.pacman {}
+.pacman {
+    z-index: 99;
+    text-align: center;
+}
 
 .pacman::before {
     content: "😶";
-
+    transform: scale(.9)
 }
 
 .blinky {
@@ -87,7 +90,7 @@ body {
     border: none;
 }
 
-.clyde.before {
+.clyde::before {
     content: "👻"
 }
 
@@ -98,4 +101,11 @@ body {
 
 .scared-ghost::before {
     content: "😱"
+}
+
+.blinky,
+.inky,
+.pinky,
+.clyde {
+    z-index: 98;
 }
