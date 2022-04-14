@@ -127,7 +127,7 @@ function control(e) {
     checkForWin()
     checkForGameOver()
 }
-document.addEventListener('keyup', control)
+document.addEventListener('keydown', control)
 
 
 function pacDotEaten() {
@@ -224,6 +224,7 @@ function moveGhost(ghost) {
             squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
         }
         checkForGameOver()
+        checkForWin()
     }, ghost.speed)
 }
 
@@ -237,7 +238,7 @@ function checkForGameOver() {
         //for each ghost - we need to stop it moving
         ghosts.forEach(ghost => clearInterval(ghost.timerId))
         //remove eventlistener from our control function
-        document.removeEventListener('keyup', control)
+        document.removeEventListener('keydown', control)
         //tell user the game is over   
         scoreDisplay.innerHTML = 'You LOSE'
     }
@@ -245,11 +246,11 @@ function checkForGameOver() {
 
 //check for win
 function checkForWin() {
-    if (score === 274) {
+    if (score === 200) {
         //stop each ghost
         ghosts.forEach(ghost => clearInterval(ghost.timerId))
         //remove the eventListener for the control function
-        document.removeEventListener('keyup', control)
+        document.removeEventListener('keydown', control)
         //tell our user we have won
         scoreDisplay.innerHTML = 'You WON!'
     }
