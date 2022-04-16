@@ -172,9 +172,9 @@ class Ghost {
 
 const ghosts = [
     new Ghost('blinky', 348, 350),
-    new Ghost('pinky', 376, 500),
-    new Ghost('inky', 351, 400),
-    new Ghost('clyde', 379, 600)
+    new Ghost('pinky', 376, 300),
+    new Ghost('inky', 351, 200),
+    new Ghost('clyde', 379, 300)
 ]
 
 //draw my ghosts onto my grid
@@ -248,7 +248,7 @@ function checkForGameOver() {
 
 //check for win
 function checkForWin() {
-    if (score === 200) {
+    if (score === 270) {
         //stop each ghost
         ghosts.forEach(ghost => clearInterval(ghost.timerId))
         //remove the eventListener for the control function
