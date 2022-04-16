@@ -45,6 +45,8 @@ const layout = [
 function createBoard() {
     //for loop 
     for (let i = 0; i < layout.length; i++) {
+
+
         //create a square 
         const square = document.createElement('div')
         //put square in grid 
